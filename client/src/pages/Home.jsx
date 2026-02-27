@@ -19,7 +19,7 @@ function Home() {
     setHasSearched(true);
 
     try {
-      const res = await axios.get(`/api/search?title=${encodeURIComponent(query)}`);
+      const res = await axios.get(`https://movie-search-backend-jg0y.onrender.com/api/search?title=${encodeURIComponent(query)}`);
       if (res.data.Response === 'True') {
         setMovies(res.data.Search);
       } else {

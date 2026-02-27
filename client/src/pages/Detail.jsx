@@ -15,7 +15,7 @@ function Detail() {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const res = await axios.get(`/api/movie/${id}`);
+        const res = await axios.get(`https://movie-search-backend-jg0y.onrender.com/api/movie/${id}`);
         if (res.data.Response === 'True') {
           setMovie(res.data);
           // Check if in favourites
